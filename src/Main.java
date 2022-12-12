@@ -9,6 +9,8 @@ public class Main {
         // a new object to print the object like my example
         // Your turn!
 
+        Phong phong = new Phong();
+        System.out.println(phong);
 
     }
 }
