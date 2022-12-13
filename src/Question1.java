@@ -46,5 +46,6 @@ public class Question1 {
         if (count >0) {
             System.out.printf("Average age = %.2f", sum/count);
         }
+
     }
 }
