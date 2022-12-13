@@ -14,5 +14,8 @@ public class Main {
 
         //:D
 
+        An an = new An();
+        System.out.println(an);
+
     }
 }
