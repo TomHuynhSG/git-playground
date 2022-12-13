@@ -1,12 +1,14 @@
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 
-public class Main {
+public class Question1 {
     public static void main(String[] args) throws IOException {
         String name, address;
         int ages;
@@ -26,7 +28,23 @@ public class Main {
             System.out.println("Enter age: ");
             ages = Integer.parseInt(scanner.nextLine());
             pw.println(name + "," + address+ ","+ ages);
-            System.out.println("Continue: ");
         pw.close();
+
+        Scanner fileScanner = new Scanner(new File("./src/test.txt"));
+        double sum = 0;
+        int count = 0;
+        while (fileScanner.hasNext()) {
+            String line = fileScanner.nextLine();
+            StringTokenizer stringTokenizer = new StringTokenizer(line, ",");
+            String nameUser = stringTokenizer.nextToken();
+            String addressUser = stringTokenizer.nextToken();
+            int age = Integer.parseInt(stringTokenizer.nextToken());
+            System.out.println(nameUser + " lives at " + addressUser + " and is " + age + " years old");
+            sum += age;
+            count++;
+        }
+        if (count >0) {
+            System.out.printf("Average age = %.2f", sum/count);
+        }
     }
 }
