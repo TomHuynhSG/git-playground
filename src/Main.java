@@ -27,6 +27,5 @@ public class Main {
             pw.println(name + "," + address+ ","+ ages);
             System.out.println("Continue: ");
         pw.close();
-
     }
 }
