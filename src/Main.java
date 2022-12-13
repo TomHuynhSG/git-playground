@@ -12,5 +12,7 @@ public class Main {
         Phong phong = new Phong();
         System.out.println(phong);
 
+        //:D
+
     }
 }
